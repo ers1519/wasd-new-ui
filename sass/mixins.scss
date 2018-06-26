@@ -1,0 +1,41 @@
+@mixin background-font-color ($background-color, $font-color) {
+	background-color: $background-color;
+	color: $font-color;
+}
+
+@mixin display-flex($wrap: nowrap) {
+	display: flex;
+
+	@if $wrap == "wrap" {
+		flex-wrap: wrap;
+	} @else {
+		flex-wrap: nowrap;
+	}
+	
+}
+
+
+@mixin border ($direction, $thickness, $style, $color) {
+	border-style: $style;
+	border-color: $color;
+
+	@if $direction == "right" {
+		border-right-width: $thickness;
+	} @else if $direction == "bottom" {
+		border-bottom-width: $thickness;
+	} @else if $direction == "left" {
+		border-left-width: $thickness;
+	} @else if $direction == "top" {
+		border-top-width: $thickness;
+	} @else if $direction == "all" {
+		border-width: $thickness;
+	}
+
+}
+
+@mixin banner($image, $padding, $font-color) {
+	background: url($image) no-repeat;
+	background-size: cover;
+	padding: $padding 0;
+	color: $font-color;
+}

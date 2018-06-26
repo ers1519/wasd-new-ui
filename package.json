@@ -1,0 +1,21 @@
+{
+  "name": "wasd-new-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w sass/ -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ers1519/wasd-new-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ers1519/wasd-new-ui/issues"
+  },
+  "homepage": "https://github.com/ers1519/wasd-new-ui#readme"
+}

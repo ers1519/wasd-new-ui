@@ -1,0 +1,172 @@
+@import "resets.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> GENERAL <<<-----------------*/
+/* ------------------------------------------------*/
+
+html {
+	color: rgba(0,0,0,0.87);
+	font: 0.81rem "Roboto", sans-serif;
+}
+
+body {
+	line-height: 1.5;
+}
+
+h1,
+p {
+  margin: 0 0 1em 0;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+a {
+	color: $main-color;
+	text-decoration: none;
+	&:hover {
+		color: $main-color;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: $main-color;
+	}
+}
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> HEADER <<<-----------------*/
+/* ------------------------------------------------*/
+
+.header {
+	background-color: $main-color;
+	padding: 10px 0;
+	line-height: 1.6em;
+	a {
+		color: #fff;
+	}
+
+}
+
+.global-left {
+	&__list {
+		@include display-flex();
+	}
+
+	&__list-item:not(:last-child) {
+		margin-right: 1.6em;
+	}
+}
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> SITE NAV <<<---------------*/
+/* ------------------------------------------------*/
+
+
+.site-nav {
+	box-shadow: $main-box-shadow;
+	line-height: 5em;
+
+	&__list {
+		@include display-flex();
+	}
+
+	&__list-item {
+		@include display-flex();
+	}
+
+	&__list-item > a {
+		@include border (right, 1px, solid, $nav-border)
+		padding: 0 1.6em;
+	}
+
+	&__list-item:first-child > a {
+		@include border (left, 1px, solid, $nav-border)
+	}
+
+}
+
+
+/* ------------------------------------------------*/
+/* --------------->>> DISCLAIMER <<<---------------*/
+/* ------------------------------------------------*/
+
+
+.disclaimer {
+	@include background-font-color($secondary-accent, #fff,);
+	box-shadow: $main-box-shadow;
+	padding: 1em 0;
+
+	a {
+		color: #fff;
+		font-weight: bold;
+	}
+
+	p:last-of-type {
+		margin: 0;
+	}
+}
+
+/* ------------------------------------------------*/
+/* ----------------->>> BANNER <<<-----------------*/
+/* ------------------------------------------------*/
+
+.site-banner {
+	@include banner('../img/main-banner.jpg', $banner-padding, #fff);
+
+	h1 {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
+	span {
+		font-size: 1.5em;
+	}
+}
+
+/* ------------------------------------------------*/
+/* ------------------>>> BODY <<<------------------*/
+/* ------------------------------------------------*/
+
+.main-body {
+	padding: 3em 0;
+}
+
+
+h1.page-title {
+	font-size: 2.5em;
+	@include border(bottom, 5px, solid, $main-color);
+	padding-bottom: 0.5em;
+}
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> FOOTER <<<-----------------*/
+/* ------------------------------------------------*/
+
+.footer {
+	@include background-font-color($main-color, #fff);
+	padding: 3em 0;
+	a {
+		color: #fff;
+	}
+
+	&__content {
+		@include display-flex();
+	}
+
+	&__content-item {
+		flex: 1 1 auto;
+	}
+}
