@@ -1,0 +1,73 @@
+html {
+	color: rgba(0,0,0,0.87);
+	font: 0.81rem "Roboto", sans-serif;
+}
+
+body {
+	line-height: 1.5;
+	background-color: $body-color;
+}
+
+h1,
+p {
+  margin: 0 0 1em 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+
+a {
+	color: $main-color;
+	text-decoration: none;
+	&:hover {
+		color: $main-color;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: $main-color;
+	}
+}
+
+
+select {
+	display: block;
+	@include border(all, 1px, solid, $input-border-color)
+	width: 100%;
+	padding: 5px;
+	border-radius: $card-border-radius;
+}
+
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+}
+
+/* ------------------------------------------------*/
+/* ------------------>>> BODY <<<------------------*/
+/* ------------------------------------------------*/
+
+.main-body {
+	padding: 3em 0;
+}
+
+
+h1.page-title {
+	font-size: 2.5em;
+	@include border(bottom, 5px, solid, $main-color);
+	padding-bottom: 0.5em;
+}

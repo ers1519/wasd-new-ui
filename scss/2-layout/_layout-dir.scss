@@ -1,0 +1,103 @@
+/* ------------------------------------------------*/
+/* ----------------->>> HEADER <<<-----------------*/
+/* ------------------------------------------------*/
+
+.header {
+	background-color: $main-color;
+	padding: 10px 0;
+	line-height: 1.6em;
+	a {
+		color: #fff;
+	}
+
+}
+
+.global-left {
+	&__list {
+		@include display-flex();
+	}
+
+	&__list-item:not(:last-child) {
+		margin-right: 1.6em;
+	}
+}
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> SITE NAV <<<---------------*/
+/* ------------------------------------------------*/
+
+
+.site-nav {
+	box-shadow: $main-box-shadow;
+	line-height: 5em;
+
+	&__list {
+		@include display-flex();
+	}
+
+	&__list-item {
+		@include display-flex();
+	}
+
+	&__list-item > a {
+		@include border (right, 1px, solid, $nav-border)
+		padding: 0 1.6em;
+	}
+
+	&__list-item:first-child > a {
+		@include border (left, 1px, solid, $nav-border)
+	}
+
+}
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> BODY MAIN <<<--------------*/
+/* ------------------------------------------------*/
+
+
+@media (min-width: 767px) {
+
+	.flex-row {
+		@include display-flex();
+
+		& .card {
+			flex: 1 1 auto;
+			margin-right: 2.5em;
+		}
+
+		& .card:last-of-type {
+			margin-right: 0;
+		}
+
+		& .flex-child-33 {
+			flex: 0 1 33%;
+		}
+
+	}
+
+
+}
+
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> FOOTER <<<-----------------*/
+/* ------------------------------------------------*/
+
+.footer {
+	@include background-font-color($main-color, #fff);
+	padding: 3em 0;
+	a {
+		color: #fff;
+	}
+
+	&__content {
+		@include display-flex();
+	}
+
+	&__content-item {
+		flex: 1 1 auto;
+	}
+}

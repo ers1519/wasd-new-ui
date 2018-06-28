@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w sass/ -o css/"
+    "sass": "node-sass -w scss/ -o css/"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,7 @@
   "bugs": {
     "url": "https://github.com/ers1519/wasd-new-ui/issues"
   },
-  "homepage": "https://github.com/ers1519/wasd-new-ui#readme"
+  "homepage": "https://github.com/ers1519/wasd-new-ui#readme",
+  "devDependencies": {},
+  "dependencies": {}
 }

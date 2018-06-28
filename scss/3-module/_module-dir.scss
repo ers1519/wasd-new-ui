@@ -1,0 +1,58 @@
+/* ------------------------------------------------*/
+/* --------------->>> DISCLAIMER <<<---------------*/
+/* ------------------------------------------------*/
+
+.disclaimer {
+	@include background-font-color($secondary-accent, #fff,);
+	box-shadow: $main-box-shadow;
+	padding: 1em 0;
+
+	a {
+		color: #fff;
+		font-weight: bold;
+	}
+
+	p:last-of-type {
+		margin: 0;
+	}
+}
+
+/* ------------------------------------------------*/
+/* ----------------->>> BANNER <<<-----------------*/
+/* ------------------------------------------------*/
+
+.site-banner {
+	@include banner('../img/main-banner.jpg', $banner-padding, #fff);
+
+	h1 {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
+	span {
+		font-size: 1.5em;
+	}
+}
+
+
+/* ------------------------------------------------*/
+/* ----------------->>> CARD <<<-----------------*/
+/* ------------------------------------------------*/
+
+.card {
+	background-color: $bg-color-card;
+	border-radius: $card-border-radius;
+	box-shadow: $card-box-shadow;
+	padding: 1em;
+	margin-bottom: 2.5em;
+}
+
+.global-error-message {
+	@include background-font-color(#ffcdd2, #c62828);
+	border-radius: $card-border-radius;
+	padding: 2em;
+}
+
+/* -------------------------------------------------------*/
+/* ----------------->>> ERROR MESSAGE <<<-----------------*/
+/* -------------------------------------------------------*/
