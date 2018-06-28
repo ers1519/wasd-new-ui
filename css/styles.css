@@ -70,7 +70,8 @@ h1 {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px; }
+  max-width: 1280px;
+  width: 90%; }
 
 a {
   color: #027abb;
